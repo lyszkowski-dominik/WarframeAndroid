@@ -2,25 +2,18 @@ package com.example.warframe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
+
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.EditText;
 import android.widget.TextView;
-
-import com.google.android.material.textfield.TextInputEditText;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    TextInputEditText mEdit;
     TextView wynik;
     String rarity;
 
@@ -44,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         wynik = findViewById(R.id.wynik);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,ComponentNames);
-        AutoCompleteTextView txv = (AutoCompleteTextView)findViewById(R.id.autoCompleteTextView2);
+        AutoCompleteTextView txv = findViewById(R.id.autoCompleteTextView2);
         txv.setAdapter(adapter);
 
     }
